@@ -289,3 +289,59 @@
   </footer>
 </body>
 </html>
+
+<style>
+  /* CSS cho popup */
+  #popup-terms {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+  }
+  #popup-terms button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin: 5px;
+  }
+  #btn-accept {
+    background: #007bff;
+    color: white;
+  }
+  #btn-accept:hover {
+    background: #0056b3;
+  }
+  #btn-skip {
+    background: #ccc;
+    color: black;
+  }
+  #btn-skip:hover {
+    background: #999;
+  }
+</style>
+
+<div id="popup-terms">
+  <p>Would you like to visit our high tech site?</p>
+  <button id="btn-accept" onclick="redirectToSite()">Try Now</button>
+  <button id="btn-skip" onclick="closePopup()">Skip</button>
+</div>
+
+<script>
+  function redirectToSite() {
+    window.location.href = "https://text2.click";
+  }
+  function closePopup() {
+    document.getElementById("popup-terms").style.display = "none";
+  }
+</script>
